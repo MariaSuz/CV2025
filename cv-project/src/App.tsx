@@ -1,3 +1,4 @@
+// @ts-ignore
 import Resume from './pages/Resume';
 function App() {
   return (
