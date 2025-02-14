@@ -1,5 +1,4 @@
-// @ts-ignore
-import Resume from './pages/Resume';
+import Resume from './pages/Resume.tsx';
 function App() {
   return (
     <Resume />

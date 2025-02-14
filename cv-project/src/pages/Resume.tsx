@@ -6,14 +6,14 @@ import { useState } from 'react'
 function Resume() {
   const [language, setLanguage] = useState(true)
   const data = !language ? DATAENG : DATARUS
-  const changeLanguage = (e) => {
+  const changeLanguage = () => {
     setLanguage(!language);
   }
   return (
     <section className='flex justify-center items-center'>
       <div className='relative w-full max-w-screen-lg grid grid-cols-[1fr_2fr] shadow p-8 rounded-sm transition: 0.5s m-14 max-[958px]:flex max-[958px]:flex-col max-[958px]:p-4'>
-        <div className='absolute top-2 right-4'>
-          <button onClick={changeLanguage} className ='bg-sky-500 transition-colors hover:bg-sky-700 text-white font-bold py-2 px-4 rounded'>{language ? 'ENG' : 'RUS'}</button>
+        <div className='absolute top-2 right-4 z-100'>
+          <button onClick={changeLanguage} className ='bg-sky-500 transition-colors z-100 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded'>{language ? 'ENG' : 'RUS'}</button>
         </div>
         <div className='p-2.5 relative flex flex-col gap-6'>
           <div className='flex flex-col justify-center items-center gap-3'>
@@ -27,7 +27,7 @@ function Resume() {
             <ul className='flex flex-col gap-2 max-[958px]:flex-row max-[958px]:justify-between max-[958px]:flex-wrap max-[521px]:flex-col'>
               {data.contactInfo.list.map((el) => (
                 <li key={el.text}>
-                  <a key={el.name}
+                  <a key={el.text}
                     href={el.url}
                     target="_blank"
                     className="transition-colors font-light hover:text-sky-500 hover:tracking-wider"
