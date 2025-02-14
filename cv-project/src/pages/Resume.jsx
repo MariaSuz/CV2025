@@ -1,24 +1,33 @@
 import image from '../assets/my-photo.jpg'
 import DATARUS from '../data/dataRus'
+import DATAENG from '../data/dataEng'
+import { useState } from 'react'
 
 function Resume() {
-  const data = DATARUS
+  const [language, setLanguage] = useState(true)
+  const data = !language ? DATAENG : DATARUS
+  const changeLanguage = (e) => {
+    setLanguage(!language);
+  }
   return (
-    <section class='flex justify-center items-center'>
-      <div class='relative w-full max-w-screen-lg grid grid-cols-[1fr_2fr] shadow p-8 rounded-sm transition: 0.5s m-14'>
+    <section className='flex justify-center items-center'>
+      <div className='relative w-full max-w-screen-lg grid grid-cols-[1fr_2fr] shadow p-8 rounded-sm transition: 0.5s m-14 max-[958px]:flex max-[958px]:flex-col max-[958px]:p-4'>
+        <div className='absolute top-2 right-4'>
+          <button onClick={changeLanguage} className ='bg-sky-500 transition-colors hover:bg-sky-700 text-white font-bold py-2 px-4 rounded'>{language ? 'ENG' : 'RUS'}</button>
+        </div>
         <div className='p-2.5 relative flex flex-col gap-6'>
-          <div class='flex flex-col justify-center items-center gap-3'>
-            <img src={image} alt="my-photo" class='rounded-full max-w-52' />
-            <h1 class='text-2xl font-medium uppercase'>{data.profileName.name}</h1>
-            <h2 class='text-lg uppercase font-light'>{data.profileName.job}</h2>
+          <div className='flex flex-col justify-center items-center gap-3'>
+            <img src={image} alt="my-photo" className='rounded-full max-w-52' />
+            <h1 className='text-2xl font-medium uppercase max-[521px]:text-center'>{data.profileName.name}</h1>
+            <h2 className='text-lg uppercase font-light'>{data.profileName.job}</h2>
           </div>
           <div className='h-px bg-gray-300 w-3xs mx-auto'></div>
           <div>
-            <h3 class='text-lg uppercase font-medium mb-4'>{data.contactInfo.title}</h3>
-            <ul className='flex flex-col gap-2'>
+            <h3 className='text-lg uppercase font-medium mb-4'>{data.contactInfo.title}</h3>
+            <ul className='flex flex-col gap-2 max-[958px]:flex-row max-[958px]:justify-between max-[958px]:flex-wrap max-[521px]:flex-col'>
               {data.contactInfo.list.map((el) => (
                 <li key={el.text}>
-                  <a
+                  <a key={el.name}
                     href={el.url}
                     target="_blank"
                     className="transition-colors font-light hover:text-sky-500 hover:tracking-wider"
@@ -31,7 +40,7 @@ function Resume() {
             </ul>
           </div>
           <div>
-            <h3 class='text-lg uppercase font-medium mb-4'>{data.education.title}</h3>
+            <h3 className='text-lg uppercase font-medium mb-4'>{data.education.title}</h3>
             <ul className='flex flex-col gap-6'>
               {data.education.list.map((el, i) => (
                 <li className='flex flex-col gap-1' key={i}>
@@ -43,7 +52,7 @@ function Resume() {
             </ul>
           </div>
           <div>
-            <h3 class='text-lg uppercase font-medium mb-4'>{data.languages.title}</h3>
+            <h3 className='text-lg uppercase font-medium mb-4'>{data.languages.title}</h3>
             <div>
             {data.languages.list.map((el) => (
                   <div key={el.name} className='mb-6'>
@@ -59,17 +68,17 @@ function Resume() {
         </div>
         <div className='p-2.5 relative flex flex-col gap-6'>
             <div>
-              <h3 class='text-2xl uppercase font-medium mb-4'>{data.aboutMe.title}</h3>
+              <h3 className='text-2xl uppercase font-medium mb-4'>{data.aboutMe.title}</h3>
               <span>{data.aboutMe.text}</span>
             </div>
             <div>
-              <h3 class='text-2xl uppercase font-medium mb-4'>{data.workExamples.title}</h3>
+              <h3 className='text-2xl uppercase font-medium mb-4'>{data.workExamples.title}</h3>
               <div className='relative'>
                 {data.workExamples.list.map((el) => (
-                    <a href={el.url}>
-                      <div className='grid grid-cols-[1fr_2fr] gap-6 mb-4'>
+                    <a href={el.url} key={el.name}>
+                      <div className='grid grid-cols-[1fr_2fr] gap-6 mb-4 max-sm:flex flex-col-reverse'>
                         <div>
-                          <img className='h-32 w-48 object-cover' src={el.image} alt={el.name} />
+                          <img className='h-32 w-48 object-cover max-sm:h-48 max-sm:w-full' src={el.image} alt={el.name} />
                         </div>
                         <div>
                           <h5 className='font-medium text-sky-500'>{el.name}</h5>
@@ -81,7 +90,7 @@ function Resume() {
               </div>
             </div>
             <div>
-              <h3 class='text-2xl uppercase font-medium mb-4'>{data.skills.title}</h3>
+              <h3 className='text-2xl uppercase font-medium mb-4'>{data.skills.title}</h3>
               <div>
                 {data.skills.list.map((el) => (
                   <div key={el.name} className='mb-6'>
@@ -95,8 +104,8 @@ function Resume() {
               </div>
             </div>
             <div className="about interest">
-              <h3 class='text-2xl uppercase font-medium mb-4'>{data.interest.title}</h3>
-              <ul className='flex justify-between'>
+              <h3 className='text-2xl uppercase font-medium mb-4'>{data.interest.title}</h3>
+              <ul className='flex justify-between max-[521px]:flex-col gap-2'>
                 {data.interest.list.map((el) => (
                   <li key={el.name}>
                     <span className="inline-block text-sky-500 p-1">{el.icon}</span>
