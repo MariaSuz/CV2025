@@ -6,6 +6,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import CodeIcon from '@mui/icons-material/Code';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import SnowshoeingIcon from '@mui/icons-material/Snowshoeing';
+import ShelterImage from '../assets/shelter-project.jpg'
+import SingUpImage from '../assets/singup-project.jpg'
+import ReactSocialImage from '../assets/social-network.jpg'
 
 const DATARUS = {
     profileName: { name: 'Мария Суздальцева', job: 'Frontend Developer' },
@@ -111,9 +114,9 @@ const DATARUS = {
     workExamples: {
         title: 'Примеры работ',
         list: [
-          { image: '../assets/shelter-project.jpg', name: 'Shelter', text: 'Лендинг 2х страничный на чистом JS. Реализован слайдер, пагинация, карусель, модальное окно, бургер-меню.', url: 'https://github.com/MariaSuz/Shelter' },
-          { image: '../assets/singup-project.jpg', name: 'Sing up form', text: 'Представлена валидация страницы регистрации с помощью JavaScript.', url: 'https://github.com/MariaSuz/sing-up' },
-          { image: '../assets/social-network.jpg', name: 'Social Network', text: 'Социальная сеть SPA, созданная с помощью React. Используется TypeScript, React Router, Redux, Axios, Redux-toolkit, Hooks.', url: 'https://github.com/MariaSuz/react-samurai-project/tree/main' },
+          { image: ShelterImage, name: 'Shelter', text: 'Лендинг 2х страничный на чистом JS. Реализован слайдер, пагинация, карусель, модальное окно, бургер-меню.', url: 'https://github.com/MariaSuz/Shelter' },
+          { image: SingUpImage, name: 'Sing up form', text: 'Представлена валидация страницы регистрации с помощью JavaScript.', url: 'https://github.com/MariaSuz/sing-up' },
+          { image: ReactSocialImage, name: 'Social Network', text: 'Социальная сеть SPA, созданная с помощью React. Используется TypeScript, React Router, Redux, Axios, Redux-toolkit, Hooks.', url: 'https://github.com/MariaSuz/react-samurai-project/tree/main' },
         ],
     },
 }

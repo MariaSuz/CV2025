@@ -1,5 +1,6 @@
 import image from '../assets/my-photo.jpg'
 import DATARUS from '../data/dataRus'
+
 function Resume() {
   const data = DATARUS
   return (
@@ -44,45 +45,46 @@ function Resume() {
           <div>
             <h3 class='text-lg uppercase font-medium mb-4'>{data.languages.title}</h3>
             <div>
-              {data.languages.list.map((el) => (
-                <div key={el.name} className='mb-8'>
-                  <span className="font-light">{el.name}</span>
-                  <div className='bg-stroke dark:bg-dark-3 relative h-2.5 w-full rounded-2xl'>
-                    <div className="bg-sky-500 absolute top-0 left-0 h-full rounded-2xl" style={{ width: `${el.percent}%` }}>
-                      <span className='bg-sky-500 absolute -right-4 bottom-full mb-2 rounded-sm px-3.5 py-1 text-sm text-white'>
-                        <span className='bg-sky-500 absolute bottom-[-2px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm'></span>
-                        {el.percent}%
-                      </span>
+            {data.languages.list.map((el) => (
+                  <div key={el.name} className='mb-6'>
+                    <span className="font-light">{el.name}</span>
+                    <div className='h-4 w-full bg-gray-300 dark:bg-neutral-600 overflow-hidden'>
+                      <div className="flex flex-col justify-center h-full bg-sky-500 rounded transition-width duration-500 ease-in-out leading-none" style={{ width: `${el.percent}%` }}>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </div>
         <div className='p-2.5 relative flex flex-col gap-6'>
             <div>
-              <h3 class='text-lg uppercase font-medium mb-4'>{data.aboutMe.title}</h3>
+              <h3 class='text-2xl uppercase font-medium mb-4'>{data.aboutMe.title}</h3>
               <span>{data.aboutMe.text}</span>
             </div>
             <div>
-              <h3 class='text-lg uppercase font-medium mb-4'>{data.workExamples.title}</h3>
-              <div>
+              <h3 class='text-2xl uppercase font-medium mb-4'>{data.workExamples.title}</h3>
+              <div className='relative'>
                 {data.workExamples.list.map((el) => (
-                  <div>
                     <a href={el.url}>
-                      <h5 className='font-medium'>{el.name}</h5>
-                      <span>{el.text}</span>
+                      <div className='grid grid-cols-[1fr_2fr] gap-6 mb-4'>
+                        <div>
+                          <img className='h-32 w-48 object-cover' src={el.image} alt={el.name} />
+                        </div>
+                        <div>
+                          <h5 className='font-medium text-sky-500'>{el.name}</h5>
+                          <span>{el.text}</span>
+                        </div>
+                      </div>
                     </a>
-                  </div>
                 ))}
               </div>
             </div>
             <div>
-              <h3 class='text-lg uppercase font-medium mb-4'>{data.skills.title}</h3>
+              <h3 class='text-2xl uppercase font-medium mb-4'>{data.skills.title}</h3>
               <div>
                 {data.skills.list.map((el) => (
-                  <div key={el.name} className='mb-10'>
+                  <div key={el.name} className='mb-6'>
                     <span className="font-light">{el.name}</span>
                     <div className='h-4 w-full bg-gray-300 dark:bg-neutral-600 overflow-hidden'>
                       <div className="flex flex-col justify-center h-full bg-sky-500 rounded transition-width duration-500 ease-in-out leading-none" style={{ width: `${el.percent}%` }}>
@@ -93,7 +95,7 @@ function Resume() {
               </div>
             </div>
             <div className="about interest">
-              <h3 class='text-lg uppercase font-medium mb-4'>{data.interest.title}</h3>
+              <h3 class='text-2xl uppercase font-medium mb-4'>{data.interest.title}</h3>
               <ul className='flex justify-between'>
                 {data.interest.list.map((el) => (
                   <li key={el.name}>
