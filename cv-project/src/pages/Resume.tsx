@@ -12,7 +12,7 @@ function Resume() {
   return (
     <section className='flex justify-center items-center'>
       <div className='relative w-full max-w-screen-lg grid grid-cols-[1fr_2fr] shadow p-8 rounded-sm transition: 0.5s m-14 max-[958px]:flex max-[958px]:flex-col max-[958px]:p-4'>
-        <div className='absolute top-2 right-4 z-100'>
+        <div className='absolute top-2 right-4 z-100 max-w-md:right-0 max-w-md:top-0'>
           <button onClick={changeLanguage} className ='bg-sky-500 transition-colors z-100 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded'>{language ? 'ENG' : 'RUS'}</button>
         </div>
         <div className='p-2.5 relative flex flex-col gap-6'>
@@ -57,10 +57,8 @@ function Resume() {
             {data.languages.list.map((el) => (
                   <div key={el.name} className='mb-6'>
                     <span className="font-light">{el.name}</span>
-                    <div className='h-4 w-full bg-gray-300 dark:bg-neutral-600 overflow-hidden'>
-                      <div className="flex flex-col justify-center h-full bg-sky-500 rounded transition-width duration-500 ease-in-out leading-none" style={{ width: `${el.percent}%` }}>
-                      </div>
-                    </div>
+                    <span className="font-light"> - </span>
+                    <span className="font-light">{el.text}</span>
                   </div>
                 ))}
             </div>

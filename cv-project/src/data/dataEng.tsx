@@ -42,8 +42,8 @@ const DATAENG = {
         list: [
           {
             date: '2024-present',
-            speciality: 'Self-education, learning programming. Course from RS School with st.0 certificate (HTML, BEM, Adaptive layout, CSS, JavaScript, Git). Online course of 120 lessons on React, Redux',
-            university: 'rs.school, codewars, youtube, lern.javascript, developer.mozilla and etc',
+            speciality: 'Self-education, learning programming. RS School course with st.0 certificate, where HTML, BEM, Adaptive layout, CSS, JavaScript, Git were studied. Online course of 120 lessons on React, Redux',
+            university: 'rs.school, codewars, learn.javascript, developer.mozilla and etc',
           },
           {
             date: '2021',
@@ -60,8 +60,8 @@ const DATAENG = {
     languages: {
         title: 'Languages',
         list: [
-          { name: 'Russian', percent: '95' },
-          { name: 'English', percent: '45' }
+          { name: 'Russian', text: 'Native' },
+          { name: 'English', text: 'A2' }
         ],
     },
     aboutMe: {
