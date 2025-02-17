@@ -95,9 +95,9 @@ const DATAENG = {
     workExamples: {
         title: 'Projects',
         list: [
+          { image: ReactSocialImage, name: 'Social Network', text: 'Social network SPA built with React. Uses TypeScript, React Router, Redux, Axios, Redux-toolkit, Hooks.', url: 'https://github.com/MariaSuz/react-samurai-project/tree/main' },
           { image: ShelterImage, name: 'Shelter', text: 'Two-page landing built with pure JavaScript. Features include a slider, pagination, a carousel, a modal window, and a burger menu.', url: 'https://github.com/MariaSuz/Shelter' },
           { image: SingUpImage, name: 'Sing up form', text: 'Registration page with validation using pure JavaScript.', url: 'https://github.com/MariaSuz/sing-up' },
-          { image: ReactSocialImage, name: 'Social Network', text: 'Social network SPA built with React. Uses TypeScript, React Router, Redux, Axios, Redux-toolkit, Hooks.', url: 'https://github.com/MariaSuz/react-samurai-project/tree/main' },
         ],
     },
 }
