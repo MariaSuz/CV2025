@@ -56,6 +56,11 @@ const DATAENG = {
       },
       {
         date: '2017',
+        speciality: 'Technical operation of aircraft electrical systems and flight navigation complexes',
+        university: 'Samara State Aerospace University',
+      },
+      {
+        date: '2015',
         speciality: 'Automation of technological processes and production',
         university: 'Samara State Aerospace University',
       },
