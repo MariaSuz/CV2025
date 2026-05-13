@@ -1,14 +1,13 @@
 
 import TelegramIcon from '@mui/icons-material/Telegram';
+import PhoneIcon from '@mui/icons-material/Phone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CodeIcon from '@mui/icons-material/Code';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import SnowshoeingIcon from '@mui/icons-material/Snowshoeing';
-import ShelterImage from '../assets/shelter-project.jpg'
 import PhoneBookImage from '../assets/phonebook.jpg'
-import ReactSocialImage from '../assets/social-network.jpg'
 
 const DATAENG = {
   profileName: { name: 'Mariia Suzdaltceva', job: 'Frontend Developer' },
@@ -19,6 +18,11 @@ const DATAENG = {
         icon: <TelegramIcon />,
         text: '@mary_sleep',
         url: 'https://t.me/mary_sleep',
+      },
+      {
+        icon: <PhoneIcon />,
+        text: '+7 (927) 654-46-42',
+        url: 'tel:+79276544642',
       },
       {
         icon: <GitHubIcon />,
@@ -51,7 +55,7 @@ const DATAENG = {
         university: 'Povolzhskiy State University of Telecommunications and Informatics',
       },
       {
-        date: '2011-2015',
+        date: '2017',
         speciality: 'Automation of technological processes and production',
         university: 'Samara State Aerospace University',
       },
@@ -61,24 +65,37 @@ const DATAENG = {
     title: 'Languages',
     list: [
       { name: 'Russian', text: 'Native' },
-      { name: 'English', text: 'A2' }
+      { name: 'English', text: 'A2 (reading documentation)' }
     ],
   },
   aboutMe: {
     title: 'About me',
-    text: `A cheerful and goal-oriented frontend developer with one year of experience. I combine my love for programming with an active lifestyle. I strive to learn something new every day, I am a fast learner, and I am ready to apply my skills in a team of professionals. I am looking for opportunities to grow further and solve interesting challenges.`,
+    text: `Cheerful and goal-oriented front-end developer with one year of commercial experience (self-employed). Specializing in Vue 3 + TypeScript: table synchronization with router, modular architecture, i18n. Combining a love for programming with an active lifestyle. Strive to learn something new every day, a fast learner, and ready to apply my skills in a team of professionals.`,
   },
   skills: {
     title: 'Skills',
     list: [
-      { name: 'HTML5, CSS3, SASS/SCSS', percent: '100' },
-      { name: 'Javascript', percent: '95' },
-      { name: 'Typescript', percent: '95' },
-      { name: 'Vue 3 (Composition API, Pinia, Vue Router)', percent: '85' },
-      { name: 'Git, GitHub', percent: '85' },
-      { name: 'Webpack, Vite', percent: '85' },
-      { name: 'Node.js + Express', percent: '75' },
-    ],
+      {
+        category: 'Main',
+        items: ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'SCSS/SASS']
+      },
+      {
+        category: 'Vue',
+        items: ['Vue 3 (Composition API)', 'Pinia', 'Vuex (modules)', 'Vue Router', 'Vuetify']
+      },
+      {
+        category: 'React (basic)',
+        items: ['React Hooks', 'Redux Toolkit', 'React Router']
+      },
+      {
+        category: 'Build Tools & Git',
+        items: ['Webpack', 'Vite', 'Git', 'GitHub']
+      },
+      {
+        category: 'Backend (basic)',
+        items: ['Node.js', 'Express']
+      }
+    ]
   },
   interest: {
     title: 'Interests',
@@ -93,14 +110,16 @@ const DATAENG = {
     achievementsTitle: 'Key achievements:',
     list: [
       {
-        period: "20.02.2025 - present",
-        position: "Frontend Developer",
-        company: "Rozhkov",
-        description: "Supporting a Vue3 application. Bug fixing, adding i18n translations, website optimization.",
+        period: "February 2025 - present",
+        position: "Frontend Developer (self-employed)",
+        company: "Self-employment",
+        description: "Development and maintenance of a B2B portal on Vue 3. Working with complex tabular data (filters, sorting, pagination), state synchronization with URL via Vue Router combined with backend requests. Modular Vuex architecture.",
         achievements: [
-          "Optimized the codebase: removed 'dead code', extracted repetitive logic into compositions and constants, reducing code volume by ~20%",
+          "Participated in implementing i18n for the entire application",
+          "Refactored tables: extracted logic into compositions",
+          "Removed dead code, extracted strings into constants",
         ],
-        technologies: ["Vue", "TypeScript", "Vuetify", "Vuex"],
+        technologies: ["Vue 3", "TypeScript", "Vuetify", "Vuex"],
       },
       {
         period: "2020 - 2025",
@@ -110,6 +129,7 @@ const DATAENG = {
         achievements: [
           "Deployed and configured a mail server for 600+ users",
           "Automated backup of critical data",
+          "Migrated an old PHP + jQuery application to a new machine",
         ],
         technologies: ["Linux (Debian)", "Windows Server", "Cisco", "1C", "MySQL", "Exim", "Dovecot"],
       },
@@ -123,18 +143,6 @@ const DATAENG = {
         name: 'PhoneBook',
         text: 'A full-featured web application for managing employee contacts within an organization. The project is built on a modern technology stack and provides a user-friendly interface for working with the company’s organizational structure. Uses Vue, TypeScript, Pinia, Vuelidate, Vuetify 3, Node + Express, Bcrypt, REST API.',
         url: 'https://github.com/MariaSuz/Phonebook',
-      },
-      {
-        image: ReactSocialImage,
-        name: 'Social Network',
-        text: 'Social network SPA built with React. Uses TypeScript, React Router, Redux, Axios, Redux-toolkit, Hooks.',
-        url: 'https://github.com/MariaSuz/react-samurai-project/tree/main',
-      },
-      {
-        image: ShelterImage,
-        name: 'Shelter',
-        text: 'Two-page landing built with pure JavaScript. Features include a slider, pagination, a carousel, a modal window, and a burger menu.',
-        url: 'https://github.com/MariaSuz/Shelter',
       },
     ],
   },

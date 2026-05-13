@@ -1,14 +1,13 @@
 
 import TelegramIcon from '@mui/icons-material/Telegram';
+import PhoneIcon from '@mui/icons-material/Phone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CodeIcon from '@mui/icons-material/Code';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import SnowshoeingIcon from '@mui/icons-material/Snowshoeing';
-import ShelterImage from '../assets/shelter-project.jpg'
 import PhoneBookImage from '../assets/phonebook.jpg'
-import ReactSocialImage from '../assets/social-network.jpg'
 
 const DATARUS = {
   profileName: { name: 'Мария Суздальцева', job: 'Frontend Developer' },
@@ -19,6 +18,11 @@ const DATARUS = {
         icon: <TelegramIcon />,
         text: '@mary_sleep',
         url: 'https://t.me/mary_sleep',
+      },
+      {
+        icon: <PhoneIcon />,
+        text: '+7 (927) 654-46-42',
+        url: 'tel:+79276544642',
       },
       {
         icon: <GitHubIcon />,
@@ -51,7 +55,7 @@ const DATARUS = {
         university: 'Поволжский государственный университет телекоммуникаций и информатики',
       },
       {
-        date: '2011-2015',
+        date: '2017',
         speciality: 'Автоматизация технологических процессов и производств',
         university: 'Самарский государственный аэрокосмический университет им. С. П. Королёва',
       },
@@ -61,24 +65,37 @@ const DATARUS = {
     title: 'Языки',
     list: [
       { name: 'Русский', text: 'Родной' },
-      { name: 'Английский', text: 'A2' }
+      { name: 'Английский', text: 'A2 (читаю документацию)' }
     ],
   },
   aboutMe: {
     title: 'Обо мне',
-    text: `Жизнерадостная и целеустремленная фронтенд-разработчица с годовым опытом работы. Сочетаю любовь к программированию с активным образом жизни. Ежедневно стремлюсь узнавать новое, быстро обучаюсь и готова применять свои навыки в команде профессионалов. Ищу возможности для дальнейшего развития и решения интересных задач.`,
+    text: `Жизнерадостная и целеустремлённая фронтенд-разработчица с годом коммерческого опыта (самозанятость). Специализируюсь на Vue 3 + TypeScript: синхронизация таблиц с роутером, модульная архитектура, i18n. Сочетаю любовь к программированию с активным образом жизни. Ежедневно стремлюсь узнавать новое, быстро обучаюсь и готова применять свои навыки в команде профессионалов.`,
   },
   skills: {
     title: 'Навыки',
     list: [
-      { name: 'HTML5, CSS3, SASS/SCSS', percent: '100' },
-      { name: 'Javascript', percent: '95' },
-      { name: 'Typescript', percent: '95' },
-      { name: 'Vue 3 (Composition API, Pinia, Vue Router)', percent: '85' },
-      { name: 'Git, GitHub', percent: '85' },
-      { name: 'Webpack, Vite', percent: '85' },
-      { name: 'Node.js + Express', percent: '75' },
-    ],
+      {
+        category: 'Main',
+        items: ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'SCSS/SASS']
+      },
+      {
+        category: 'Vue',
+        items: ['Vue 3 (Composition API)', 'Pinia', 'Vuex (модули)', 'Vue Router', 'Vuetify']
+      },
+      {
+        category: 'React (базовый)',
+        items: ['React Hooks', 'Redux Toolkit', 'React Router']
+      },
+      {
+        category: 'Build Tools & Git',
+        items: ['Webpack', 'Vite', 'Git', 'GitHub']
+      },
+      {
+        category: 'Backend (базовый)',
+        items: ['Node.js', 'Express']
+      }
+    ]
   },
   interest: {
     title: 'Интересы',
@@ -93,23 +110,26 @@ const DATARUS = {
     achievementsTitle: 'Ключевые результаты:',
     list: [
       {
-        period: "20.02.2025 - настоящее время",
-        position: "Фронтенд разработчик",
-        company: "ИП Рожков",
-        description: "Поддержка приложения на Vue3. Устранения багов, добавление переводов i18n, оптимизация сайта.",
+        period: "Февраль 2025 - настоящее время",
+        position: "Frontend-разработчик (самозанятая)",
+        company: "Самозанятость (коммерческий проект)",
+        description: "Разработка и поддержка B2B-портала на Vue 3. Работа со сложными табличными данными (фильтры, сортировка, пагинация), в проекте синхронизация состояния с URL через Vue Router с запросом на бэкенд. Модульная архитектура Vuex.",
         achievements: [
-          `Оптимизировала кодовую базу: удалила 'мертвый код', вынесла повторяющуюся логику в композиции и константы, сократив объем кода на ~20%",`,
+          "Участвовала во внедрении i18n для всего приложения",
+          "Провела рефакторинг таблиц: вынесла логику в композиции",
+          "Удалила мёртвый код, вынесла строки в константы",
         ],
-        technologies: ["Vue", "TypeScript", "Vuetify", "Vuex"],
+        technologies: ["Vue 3", "TypeScript", "Vuetify", "Vuex", "i18n"],
       },
       {
         period: "2020 - 2025",
-        position: "Инженер-программист",
+        position: "Системный администратор",
         company: "ГБУК САТОБ",
         description: "Работа системным администратором, те настройка почтового сервиса  на основе Debian (Exim + Dovecot), работа в AD, настройка компьютерного и серверного оборудования.",
         achievements: [
           "Развернула и настроила почтовый сервер для 600+ пользователей",
           "Автоматизировала резервное копирование критически важных данных",
+          "Перенесла старое приложение на PHP + jQuery на новую машину",
         ],
         technologies: ["Linux (Debian)", "Windows Server", "Cisco", "1С", "MySQL", "Exim", "Dovecot"],
       },
@@ -117,24 +137,12 @@ const DATARUS = {
   },
   workExamples: {
     title: 'Примеры работ',
-   list: [
+    list: [
     {
       image: PhoneBookImage,
       name: 'PhoneBook',
       text: 'Полнофункциональное веб-приложение для управления контактами сотрудников организации. Проект построен на современном стеке технологий и предоставляет удобный интерфейс для работы с организационной структурой компании. Используется Vue, TypeScript, Pinia, Vuelidate, Vuetify 3, Node + Express, Bcrypt, REST API.',
       url: 'https://github.com/MariaSuz/Phonebook',
-    },
-    {
-      image: ReactSocialImage,
-      name: 'Social Network',
-      text: 'Социальная сеть SPA, созданная с помощью React. Используется TypeScript, React Router, Redux, Axios, Redux-toolkit, Hooks.',
-      url: 'https://github.com/MariaSuz/react-samurai-project/tree/main',
-    },
-    {
-      image: ShelterImage,
-      name: 'Shelter',
-      text: 'Лендинг 2х страничный на чистом JS. Реализован слайдер, пагинация, карусель, модальное окно, бургер-меню.',
-      url: 'https://github.com/MariaSuz/Shelter',
     },
     ],
   },

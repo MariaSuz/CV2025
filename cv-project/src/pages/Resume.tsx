@@ -210,17 +210,20 @@ function Resume() {
               <span className='text-sky-500'>⚡</span> {data.skills.title}
             </h3>
             <div className='space-y-4'>
-              {data.skills.list.map((el) => (
-                <div key={el.name}>
-                  <div className='flex justify-between mb-1'>
-                    <span className="font-medium text-gray-700 dark:text-gray-300">{el.name}</span>
-                    <span className="text-sm text-sky-600 dark:text-sky-400 font-mono">{el.percent}%</span>
+              {data.skills.list.map((category) => (
+                <div key={category.category}>
+                  <div className='text-sm font-semibold text-sky-600 dark:text-sky-400 mb-2'>
+                    {category.category}
                   </div>
-                  <div className='h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden'>
-                    <div
-                      className="h-full bg-gradient-to-r from-sky-500 to-sky-600 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${el.percent}%` }}
-                    ></div>
+                  <div className='flex flex-wrap gap-2'>
+                    {category.items.map((tech) => (
+                      <span 
+                        key={tech}
+                        className='px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-sky-100 dark:hover:bg-sky-900 transition-all duration-200'
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               ))}
