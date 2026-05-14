@@ -45,7 +45,7 @@ const DATAENG = {
     title: 'Education',
     list: [
       {
-        date: '2024-present',
+        date: '2024 - present',
         speciality: 'Self-education, learning programming. RS School course with st.0 certificate, where HTML, BEM, Adaptive layout, CSS, JavaScript, Git were studied. Online course of 120 lessons on React, Redux',
         university: 'rs.school, codewars, learn.javascript, developer.mozilla and etc',
       },
@@ -75,7 +75,7 @@ const DATAENG = {
   },
   aboutMe: {
     title: 'About me',
-    text: `Cheerful and goal-oriented front-end developer with one year of commercial experience (self-employed). Specializing in Vue 3 + TypeScript: table synchronization with router, modular architecture, i18n. Combining a love for programming with an active lifestyle. Strive to learn something new every day, a fast learner, and ready to apply my skills in a team of professionals.`,
+    text: 'Cheerful and goal-oriented front-end developer with 1.5 years of commercial experience (self-employed). Specializes in Vue 3 + TypeScript. Combines a love for programming with an active lifestyle. Strives to learn something new every day, learns quickly, and is ready to apply her skills in a team of professionals.',
   },
   skills: {
     title: 'Skills',
@@ -118,13 +118,13 @@ const DATAENG = {
         period: "February 2025 - present",
         position: "Frontend Developer (self-employed)",
         company: "Self-employment",
-        description: "Development and maintenance of a B2B portal on Vue 3. Working with complex tabular data (filters, sorting, pagination), state synchronization with URL via Vue Router combined with backend requests. Modular Vuex architecture.",
+        description: "Development and support of a portal for managing terminals and transactions. On the main page, charts make it easy to understand payment and terminal data. I work in a small team, handling the development and maintenance of this functionality. The project uses the following stack: Vue 3, Vuetify, Vuex, Vue Router, TypeScript. A complex filtering and sorting system has been implemented.",
         achievements: [
-          "Participated in implementing i18n for the entire application",
-          "Refactored tables: extracted logic into compositions",
-          "Removed dead code, extracted strings into constants",
+          "Implemented i18n - interface translation into two languages",
+          "Adapt and configure a complex filtering and sorting system for new table pages",
+          "Improved application performance by refactoring resource-intensive tables, removing unused code, and extracting strings into enums",
         ],
-        technologies: ["Vue 3", "TypeScript", "Vuetify", "Vuex"],
+        technologies: ["Vue 3", "TypeScript", "Vuetify", "Vuex", "Vue Router", "i18n"],
       },
       {
         period: "2020 - 2025",
@@ -135,6 +135,7 @@ const DATAENG = {
           "Deployed and configured a mail server for 600+ users",
           "Automated backup of critical data",
           "Migrated an old PHP + jQuery application to a new machine",
+          "Developed and deployed a full-stack application for employees using Vue + Node.js (a corporate directory containing information about offices, positions, phone numbers, regulations, and links to portals).",
         ],
         technologies: ["Linux (Debian)", "Windows Server", "Cisco", "1C", "MySQL", "Exim", "Dovecot"],
       },
